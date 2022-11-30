@@ -25,4 +25,14 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DESTDIR = $$PWD/Runtime
+UV_SUFFIX=
+CONFIG(debug,debug|release){
+    UV_SUFFIX=_d
+}else{
+
+}
+
+DESTDIR = $$PWD/../../bin
+TARGET  = $$TARGET$$UV_SUFFIX
+
+

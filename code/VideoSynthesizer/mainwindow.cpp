@@ -103,19 +103,6 @@ void MainWindow::on_BtnExport_clicked(bool checked)
         ui->TB_FFMPEGLOG->append("STILL RUNNING");
         return;
     }
-
-//    m_queue4MetaInfo.enqueue(MetaInfo("E:/WorkStation/VersionManagement_NO/qmake/VideoSynthesizer/Runtime/outerdir"
-//                                       ,"F:/QLDownload",
-//                                      "jiao1.mp4"));
-//    m_queue4MetaInfo.enqueue(MetaInfo("E:/WorkStation/VersionManagement_NO/qmake/VideoSynthesizer/Runtime/outerdir"
-//                                       ,"F:/QLDownload",
-//                                      "jiao2.mp4"));
-//    m_queue4MetaInfo.enqueue(MetaInfo("E:/WorkStation/VersionManagement_NO/qmake/VideoSynthesizer/Runtime/outerdir"
-//                                       ,"F:/QLDownload",
-//                                      "jiao3.mp4"));
-
-
-
     readCache(ui->InputCachePath->text(),m_queue4MetaInfo,ui->InputExportPath->text());
     invokeTrans(m_queue4MetaInfo);
     ui->TB_FFMPEGLOG->clear();
